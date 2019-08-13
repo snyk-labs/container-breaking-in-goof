@@ -1,6 +1,8 @@
 "use strict";
 const PORT = 3112;
 
+const path = require("path");
+const fastifyStatic = require("fastify-static");
 const fastify = require("fastify")({
   logger: {
     level: "info",
@@ -8,10 +10,8 @@ const fastify = require("fastify")({
   }
 });
 
-fastify.get("/health", (req, res) => {
-  res.send({
-    status: "all ok buddy!"
-  });
+fastify.register(fastifyStatic, {
+  root: path.join(__dirname, "public")
 });
 
 fastify.listen(PORT, err => {
