@@ -16,7 +16,7 @@
   "dependencies": {
     "fastify": "^2.7.1",
     "fastify-multipart": "^1.0.2",
-    "fastify-static": "^2.5.0",
+    "fastify-static": "^2.7.0",
     "pino-pretty": "^3.2.0",
     "pump": "^3.0.0"
   }
