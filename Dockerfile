@@ -4,7 +4,6 @@ RUN mkdir /usr/src/goof
 COPY . /usr/src/goof
 WORKDIR /usr/src/goof
 
-RUN npm update
 RUN npm install
 EXPOSE 3112
 EXPOSE 31337
