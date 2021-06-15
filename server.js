@@ -5,14 +5,14 @@ const fs = require("fs");
 const child_process = require("child_process");
 
 const PORT = 3112;
-const FILE_OUTPUT = "/tmp/resized_picture.jpg";
+const FILE_OUTPUT = path.join(__dirname, "public/files/resized_picture.jpg")
 
 const upload = multer({ dest: 'uploads/' })
 const app = express()
 
 app.post('/upload', upload.single('twitter_picture'), function (req, res, next) {
 
-    child_process.execFile(
+  child_process.execFile(
       "/usr/bin/convert",
       [path.join(__dirname, req.file.path), "-resize", "280x150", FILE_OUTPUT],
       function() {
