@@ -63,7 +63,7 @@ This repo includes a remote command execution exploit with a netcat download to 
 
   ```
   cd exploits
-  serve .
+  serve . -l 5000
   ```
 
 - Browse to `http://localhost:3112/public`, choose a picture to upload and click `resize` to assert the functionality is as expected - you should be redirected to the `result.html` page that shows the scaled image.
