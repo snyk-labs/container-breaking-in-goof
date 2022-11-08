@@ -5,7 +5,7 @@ const fs = require("fs");
 const child_process = require("child_process");
 
 const PORT = 3112;
-const FILE_OUTPUT = path.join(__dirname, "public/files/resized_picture.jpg")
+const FILE_OUTPUT = path.join(__dirname, "public/resized_picture.jpg")
 
 const upload = multer({ dest: 'uploads/' })
 const app = express()
